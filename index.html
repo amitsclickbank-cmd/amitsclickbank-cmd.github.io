@@ -15,83 +15,65 @@
         radial-gradient(1200px 600px at 15% 10%, rgba(239,68,68,.18), transparent 60%),
         radial-gradient(900px 500px at 85% 20%, rgba(250,204,21,.12), transparent 55%),
         linear-gradient(180deg, #070707 0%, #0d0d0d 45%, #111111 100%);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
-    .noise:before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: .04;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    .noise:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.08;
+      mix-blend-mode:soft-light;
+      background-image: linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: radial-gradient(circle at center, black, transparent 90%);
     }
     .glass {
-      background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 24px 80px rgba(0,0,0,.45);
+      backdrop-filter: blur(14px);
     }
-    @keyframes pulse-glow {
-      0%, 100% { transform: scale(1); box-shadow: 0 0 25px rgba(239, 68, 68, 0.4); }
-      50% { transform: scale(1.03); box-shadow: 0 0 45px rgba(239, 68, 68, 0.7); }
+    .accent-line {
+      background: linear-gradient(90deg, #ef4444 0%, #f59e0b 45%, #f3f4f6 100%);
     }
-    .btn-glow-danger {
-      animation: pulse-glow 2s infinite ease-in-out;
-    }
-    @keyframes radar-scan {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    .radar-sweep {
-      animation: radar-scan 7s linear infinite;
-      transform-origin: bottom right;
+    .btn-glow {
+      box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 20px 60px rgba(239,68,68,.25);
     }
   </style>
 </head>
-<body class="noise relative min-h-screen text-slate-100 antialiased selection:bg-red-500/30 selection:text-red-200">
-
-  <div class="bg-gradient-to-r from-red-950 via-red-700 to-red-950 text-white text-center py-2 px-4 text-xs font-mono uppercase tracking-widest border-b border-red-900/60 flex items-center justify-center gap-2">
-    <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
-    OFF-GRID INTERACTION PROTOCOL ACTIVE // 100% SECURE BROADCASTED ROUTE
-  </div>
-
-  <header class="border-b border-white/5 bg-black/40 py-4 px-6 backdrop-blur-md sticky top-0 z-50">
-    <div class="mx-auto flex max-w-6xl items-center justify-between">
-      <a href="https://f2df22ydoofkysfkkhuo5z0m2b.hop.clickbank.net" target="_blank" rel="noopener" class="flex items-center gap-2 text-xl font-black tracking-tight text-white uppercase">
-        <i data-lucide="shield-alert" class="h-5 w-5 text-red-500"></i> SMART<span class="text-yellow-400">WATERBOX</span>™
-      </a>
-      <div class="rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
-        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Verified presentation channel
+<body class="noise text-slate-100 antialiased">
+  <main class="relative overflow-hidden">
+    <section class="relative mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-10">
+      <div class="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
+        <div class="flex items-center gap-3">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/15">
+            <i data-lucide="droplets" class="h-6 w-6 text-red-400"></i>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.35em] text-red-400">SmartWaterBox</p>
+            <p class="text-sm text-slate-300">Survival water security system</p>
+          </div>
+        </div>
+        <div class="hidden items-center gap-2 rounded-full border border-red-500/25 bg-red-500/10 px-4 py-2 text-sm text-red-200 md:flex">
+          <i data-lucide="triangle-alert" class="h-4 w-4"></i>
+          <span>Water interruptions are not a drill</span>
+        </div>
       </div>
-    </div>
-  </header>
 
-  <section class="px-4 pt-12 pb-16 text-center lg:pt-16">
-    <div class="mx-auto max-w-4xl">
-      
-      <span class="inline-block rounded-full border border-red-500/20 bg-red-500/10 px-4 py-1.5 font-mono text-xs font-bold uppercase tracking-widest text-red-400 mb-6">
-        ⚠️ ALERT: U.S. Independent Water Security Presentation
-      </span>
-
-      <h1 class="text-3xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl lg:leading-[1.1]">
-        Are You Prepared If The Public Grid Water Supply <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">Permanently Shuts Off?</span>
-      </h1>
-      
-      <p class="mx-auto mt-6 max-w-2xl text-base text-slate-400 sm:text-lg lg:text-xl leading-relaxed">
-        Discover the underground <strong class="text-white font-bold">SmartWaterBox™</strong> blueprint thousands of self-reliant families are deploying right now to unlock an infinite supply of pure drinking water.
-      </p>
-
-      <div class="mx-auto mt-10 max-w-3xl rounded-[2rem] border-4 border-slate-800 bg-black/60 p-2 shadow-2xl shadow-red-950/20">
-        <div class="relative overflow-hidden rounded-[1.75rem] bg-slate-950 flex flex-col items-center justify-center h-[240px] sm:h-[360px] md:h-[450px]">
-          
-          <div class="absolute inset-0 opacity-15 bg-[linear-gradient(to_right,#ef4444_1px,transparent_1px),linear-gradient(to_bottom,#ef4444_1px,transparent_1px)] bg-[size:30px_30px]"></div>
-          
-          <div class="absolute w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] border border-red-500/15 rounded-full flex items-center justify-center">
-            <div class="w-2/3 h-2/3 border border-red-500/10 rounded-full flex items-center justify-center">
-              <div class="w-1/2 h-1/2 border border-red-500/5 rounded-full"></div>
-            </div>
-            <div class="absolute inset-0 max-w-[50%] max-h-[50%] border-r border-b border-red-500/30 radar-sweep"></div>
+      <div class="grid items-center gap-10 py-10 lg:grid-cols-12 lg:py-16">
+        <div class="lg:col-span-7">
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-2 text-sm font-bold uppercase tracking-[0.25em] text-red-300">
+            <i data-lucide="alert-triangle" class="h-4 w-4"></i>
+            Warning: clean water may disappear before power does
           </div>
 
-          <div class="absolute top-4 left-4 right-4 flex justify-between font-mono text-[9px] text-slate-600">
-            <div class="flex items-center gap-1.5 text-red-500"><span class="w-1.
+          <h1 class="max-w-4xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-7xl">
+            Secure a reliable supply of clean drinking water
+            <span class="text-red-400">without electricity or expensive plumbing.</span>
+          </h1>
+
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
+            When the grid fails, water pressure can vanish fast—and most households have only a short window before stored water, nearby taps, and delivery options become uncertain. SmartWaterBox is designed to help you stay ahead of that moment.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
