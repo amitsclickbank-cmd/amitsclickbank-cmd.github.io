@@ -1,240 +1,319 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SmartWaterBox | Secure Clean Drinking Water Without Electricity</title>
-  <meta name="description" content="SmartWaterBox is a compact off-grid survival water security system for reliable clean drinking water without electricity or expensive plumbing. Watch the free presentation now.">
+  <title>SmartWaterBox™ | Official Emergency Protocol Presentation</title>
+  <meta name="description" content="Secure your household water independence before the municipal grid faces critical failure. Watch the urgent presentation.">
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  
   <style>
-    :root { color-scheme: dark; }
     html { scroll-behavior: smooth; }
     body {
-      background:
-        radial-gradient(1200px 600px at 15% 10%, rgba(239,68,68,.18), transparent 60%),
-        radial-gradient(900px 500px at 85% 20%, rgba(250,204,21,.12), transparent 55%),
-        linear-gradient(180deg, #070707 0%, #0d0d0d 45%, #111111 100%);
+      background-color: #020617;
+      color: #f8fafc;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     }
-    .noise:before{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      opacity:.08;
-      mix-blend-mode:soft-light;
-      background-image: linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
-      background-size: 32px 32px;
-      mask-image: radial-gradient(circle at center, black, transparent 90%);
+    .grid-bg {
+      background-image: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath d='M30 0H0v30h30V0zM1 29V1h28v28H1z' fill='%231e293b' fill-opacity='.4'/%3E%3C/svg%3E");
     }
-    .glass {
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
-      border: 1px solid rgba(255,255,255,.12);
-      box-shadow: 0 24px 80px rgba(0,0,0,.45);
-      backdrop-filter: blur(14px);
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 0.4; }
+      100% { transform: scale(0.95); opacity: 0.8; }
     }
-    .accent-line {
-      background: linear-gradient(90deg, #ef4444 0%, #f59e0b 45%, #f3f4f6 100%);
+    .glowing-red {
+      box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
     }
-    .btn-glow {
-      box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 20px 60px rgba(239,68,68,.25);
+    @keyframes radar-beam {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .radar-line {
+      animation: radar-beam 6s linear infinite;
+      transform-origin: bottom right;
     }
   </style>
 </head>
-<body class="noise text-slate-100 antialiased">
-  <main class="relative overflow-hidden">
-    <section class="relative mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-10">
-      <div class="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
-        <div class="flex items-center gap-3">
-          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/15">
-            <i data-lucide="droplets" class="h-6 w-6 text-red-400"></i>
+<body class="antialiased grid-bg">
+
+  <div class="bg-gradient-to-r from-red-800 via-red-600 to-red-800 text-white text-center py-2.5 px-4 text-xs sm:text-sm font-black uppercase tracking-widest border-b border-red-500 shadow-xl flex items-center justify-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-white animate-ping"></span> 
+    CRITICAL INFRASTRUCTURE WARNING: WATER SUPPLY SECURITY PROTOCOL ACTIVE
+  </div>
+
+  <header class="py-4 px-6 bg-slate-950/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-2 font-black text-xl md:text-2xl text-slate-100 tracking-tight">
+        <i data-lucide="shield-alert" class="w-6 h-6 text-red-500"></i> SMART<span class="text-sky-400">WATERBOX</span>™
+      </div>
+      <div class="text-[10px] font-mono text-slate-400 uppercase tracking-widest bg-slate-900 px-3 py-1.5 rounded border border-slate-800">
+        STATUS: <span class="text-emerald-400 font-bold">SECURE CHANNEL</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="pt-12 pb-20 px-4 text-center relative overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    
+    <div class="max-w-4xl mx-auto relative z-10">
+      <span class="text-red-400 font-mono text-xs sm:text-sm font-bold uppercase tracking-widest block mb-4 bg-red-950/50 w-fit mx-auto px-4 py-1 rounded-full border border-red-900/40">
+        🛑 CLASSIFIED PRESENTATION FOR U.S. CITIZENS ONLY
+      </span>
+      
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-none mb-6 text-white">
+        When The Grid Goes Dark, The Water <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">STOPS RUNNING.</span> Are You Ready?
+      </h1>
+      
+      <p class="text-slate-400 max-w-2xl mx-auto text-base sm:text-lg md:text-xl mb-10 leading-relaxed">
+        Don't wait for FEMA trucks. Discover how a simple offline hack called the <strong class="text-slate-200">SmartWaterBox™</strong> supplies endless crystal-pure drinking water under any crisis condition.
+      </p>
+
+      <div class="max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(14,165,233,0.15)] border-4 border-slate-800 bg-slate-950 mb-10 relative group">
+        
+        <div class="w-full h-[240px] sm:h-[360px] md:h-[460px] flex flex-col items-center justify-center p-6 relative overflow-hidden bg-[radial-gradient(circle_at_center,#0f172a_0%,#020617_100%)]">
+          
+          <div class="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#0284c7_1px,transparent_1px),linear-gradient(to_bottom,#0284c7_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+          
+          <div class="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] border border-sky-500/20 rounded-full flex items-center justify-center">
+            <div class="w-3/4 h-3/4 border border-sky-500/15 rounded-full flex items-center justify-center">
+              <div class="w-1/2 h-1/2 border border-sky-500/10 rounded-full"></div>
+            </div>
+            <div class="absolute inset-0 max-w-[50%] max-h-[50%] border-r border-b border-sky-500/40 radar-line"></div>
+          </div>
+
+          <div class="absolute top-4 left-4 right-4 flex justify-between items-center font-mono text-[9px] text-slate-500">
+            <div class="flex items-center gap-1.5 text-red-400"><span class="w-1.5 h-1.5 bg-red-500 rounded-full animate-ping"></span> FEED_STREAM: OVERRIDE</div>
+            <div>SYS_SYS: LOCK_ON_SOURCE</div>
+          </div>
+
+          <div class="relative z-20 flex flex-col items-center">
+            <a href="https://f2df22ydoofkysfkkhuo5z0m2b.hop.clickbank.net" target="_blank" rel="noopener" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-orange-500 via-red-500 to-amber-500 flex items-center justify-center text-white shadow-2xl transition duration-300 hover:scale-110 border-4 border-white/20 glowing-red">
+              <i data-lucide="play" class="w-10 h-10 fill-white ml-1.5"></i>
+            </a>
+            <span class="mt-6 text-sm sm:text-lg font-mono font-black text-amber-400 uppercase tracking-wider block drop-shadow-md">
+              ⚠️ CLICK TO INITIATE CLASSIFIED VIDEO DECODE
+            </span>
+            <span class="text-[10px] text-slate-400 mt-1 uppercase font-mono">Stream Optimization Built for Off-Grid Access</span>
+          </div>
+
+          <div class="absolute bottom-4 font-mono text-[10px] text-slate-400 bg-slate-900/90 px-3 py-1 rounded border border-slate-800">
+            [WARNING: Presentation can not be paused once connection begins]
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap justify-center items-center gap-6 text-slate-500 text-xs font-mono">
+        <span class="flex items-center gap-1.5"><i data-lucide="check-square" class="w-4 h-4 text-sky-400"></i> No Special Mechanics Required</span>
+        <span class="text-slate-800">|</span>
+        <span class="flex items-center gap-1.5"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-500"></i> Critical Knowledge Asset</span>
+      </div>
+
+    </div>
+  </section>
+
+  <main class="max-w-5xl mx-auto px-4 py-12">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-24 bg-slate-900/60 p-6 sm:p-10 rounded-2xl border border-slate-800 shadow-xl">
+      <div class="space-y-4">
+        <span class="bg-red-950 text-red-400 text-xs font-mono font-bold uppercase px-2.5 py-1 rounded border border-red-900/60">CONCENTRIC VULNERABILITY MODEL</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight">
+          Why Standard Filters Are Completely Useless Against Grid Shutdowns
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          Store-bought carbon pitchers or fancy chemical tablets are fundamentally designed on one major assumption: **constant municipal pipeline water flow.** </p>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          The moment cyber-attacks, winter freezes, or grid malfunctions pull the plug on power plants, chemical treatment shuts off instantly. Poisons fill the backup tanks, and water stop coming completely. The <strong>SmartWaterBox™</strong> system is designed completely decentralized.
+        </p>
+      </div>
+
+      <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 h-80 flex flex-col justify-between relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f43f5e_1px,transparent_1px)] [background-size:12px_12px]"></div>
+        
+        <div class="flex justify-between items-center font-mono text-[10px]">
+          <span class="text-slate-500">THREAT INDEX_VIEW</span>
+          <span class="text-red-500 font-bold bg-red-950/60 px-2 py-0.5 rounded border border-red-900/50">OUTAGE EXPOSURE</span>
+        </div>
+
+        <div class="space-y-4 my-auto relative z-10">
+          <div class="space-y-1">
+            <div class="flex justify-between text-[11px] font-mono text-slate-400"><span>City Infrastructure Linkage</span> <span class="text-red-400">92% Collapse Risk</span></div>
+            <div class="w-full bg-slate-900 h-2.5 rounded overflow-hidden border border-slate-800"><div class="bg-red-500 h-full w-[92%]"></div></div>
+          </div>
+          <div class="space-y-1">
+            <div class="flex justify-between text-[11px] font-mono text-slate-400"><span>Commercial Pump Station Dependence</span> <span class="text-orange-400">84% Failure Rate</span></div>
+            <div class="w-full bg-slate-900 h-2.5 rounded overflow-hidden border border-slate-800"><div class="bg-orange-500 h-full w-[84%]"></div></div>
+          </div>
+          <div class="space-y-1">
+            <div class="flex justify-between text-[11px] font-mono text-slate-400"><span>SmartWaterBox Decentralized Loop</span> <span class="text-emerald-400">0% External Risk</span></div>
+            <div class="w-full bg-slate-900 h-2.5 rounded overflow-hidden border border-slate-800"><div class="bg-emerald-500 h-full w-[4%] animate-pulse"></div></div>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 p-2.5 rounded text-center border border-slate-800">
+          <p class="text-[11px] font-mono text-slate-400">Gravity Mechanics Operating - Grid Isolation Confirmed</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mb-12">
+      <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight">Three Pillars Of absolute Isolation</h2>
+      <p class="text-slate-500 mt-2 text-sm sm:text-base font-mono">Engineered to work when everything else fails completely.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+      
+      <div class="bg-slate-900/40 rounded-2xl p-6 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+        <div>
+          <div class="bg-slate-950 rounded-xl h-40 mb-5 flex flex-col items-center justify-center p-4 border border-slate-800 relative overflow-hidden">
+            <div class="absolute inset-x-0 top-1/2 h-0.5 border-t border-dashed border-sky-500/20"></div>
+            <i data-lucide="lock" class="w-10 h-10 text-sky-400 mb-2 relative z-10"></i>
+            <span class="text-[10px] font-mono text-slate-500 relative z-10">SPECIFICATION // SEC-ALPHA</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-100 mb-2">Hermetic Containment Seals</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            Discover the exact physical configuration instructions to protect your reservoir against flying airborne ash, microscopic biological pathogens, and dirt particles.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/40 rounded-2xl p-6 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+        <div>
+          <div class="bg-slate-950 rounded-xl h-40 mb-5 flex flex-col items-center justify-center p-4 border border-slate-800 relative overflow-hidden">
+            <div class="absolute inset-y-0 left-1/2 w-0.5 border-l border-dashed border-amber-500/20"></div>
+            <i data-lucide="git-merge" class="w-10 h-10 text-amber-400 mb-2 relative z-10"></i>
+            <span class="text-[10px] font-mono text-slate-500 relative z-10">ROUTING // BACKWASH-02</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-100 mb-2">Infinite Backwash System</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            The secret to infinite reuse. Learn how to configure simple, low-cost standard hardware valves to reverse water direction and flush out debris completely.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/40 rounded-2xl p-6 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+        <div>
+          <div class="bg-slate-950 rounded-xl h-40 mb-5 flex flex-col items-center justify-center p-4 border border-slate-800 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-5 bg-[linear-gradient(45deg,#fff_25%,transparent_25%,transparent_75%,#fff_75%,#fff),linear-gradient(45deg,#fff_25%,transparent_25%,transparent_75%,#fff_75%,#fff)] bg-[size:10px_10px] bg-[position:0_0,5px_5px]"></div>
+            <i data-lucide="infinity" class="w-10 h-10 text-emerald-400 mb-2 relative z-10"></i>
+            <span class="text-[10px] font-mono text-slate-500 relative z-10">KINETIC // GRAVITY-FLOW</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-100 mb-2">Zero Power Kinetic Flow</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            Requires absolutely no high-wattage battery power banks, expensive replacement solar cell arrays, gasoline, or complicated machinery. Works 100% on natural physics.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 text-white rounded-2xl p-6 sm:p-10 mb-24 border border-slate-800 shadow-2xl relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:20px_20px]"></div>
+      
+      <div class="text-center max-w-xl mx-auto mb-12 relative z-10">
+        <span class="text-sky-400 font-mono text-xs uppercase tracking-widest">SYSTEM DEPLOYMENT PHASES</span>
+        <h3 class="text-2xl sm:text-3xl font-black tracking-tight mt-1">What You Download Inside The Blueprint System</h3>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 relative z-10">
+        
+        <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 flex flex-col justify-between h-44">
+          <div class="flex justify-between items-start">
+            <span class="text-xs font-mono text-slate-500">PHASE // 01</span>
+            <i data-lucide="clipboard-list" class="w-4 h-4 text-sky-400"></i>
           </div>
           <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.35em] text-red-400">SmartWaterBox</p>
-            <p class="text-sm text-slate-300">Survival water security system</p>
+            <h4 class="font-bold text-sm text-slate-200">The Quick-Sourcing Checklist</h4>
+            <p class="text-slate-500 text-xs mt-1">Every exact part listed down clearly. Materials can be acquired inside any basic hardware mart across the country for pennies.</p>
           </div>
         </div>
-        <div class="hidden items-center gap-2 rounded-full border border-red-500/25 bg-red-500/10 px-4 py-2 text-sm text-red-200 md:flex">
-          <i data-lucide="triangle-alert" class="h-4 w-4"></i>
-          <span>Water interruptions are not a drill</span>
+
+        <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 flex flex-col justify-between h-44">
+          <div class="flex justify-between items-start">
+            <span class="text-xs font-mono text-slate-500">PHASE // 02</span>
+            <i data-lucide="map" class="w-4 h-4 text-sky-400"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-slate-200">Visual Component Assembly Map</h4>
+            <p class="text-slate-500 text-xs mt-1">No complicated technical reading required. Follow clear, step-by-step visual configuration pipelines built for the everyday beginner.</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 flex flex-col justify-between h-44">
+          <div class="flex justify-between items-start">
+            <span class="text-xs font-mono text-slate-500">PHASE // 03</span>
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-slate-200">Purity Verification Checklists</h4>
+            <p class="text-slate-500 text-xs mt-1">Simple diagnostic steps to test and ensure your setup outputs pristine, sweet, perfectly risk-free hydration water on total lock.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="bg-gradient-to-b from-slate-900 to-slate-950 rounded-2xl p-8 md:p-12 text-center border border-slate-800 shadow-2xl max-w-3xl mx-auto relative overflow-hidden">
+      <div class="absolute -right-16 -top-16 w-36 h-36 bg-orange-500/10 rounded-full blur-2xl"></div>
+      
+      <h3 class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-4">
+        Lock In Your Household Water Independence Blueprint
+      </h3>
+      <p class="text-slate-400 text-sm sm:text-base max-w-md mx-auto mb-10 leading-relaxed">
+        Click the urgent confirmation action button below to redirect instantly to our secure, 256-bit encrypted master download portal interface.
+      </p>
+
+      <div class="flex flex-col items-center gap-4 relative z-10">
+        <a href="https://f2df22ydoofkysfkkhuo5z0m2b.hop.clickbank.net" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500 via-red-500 to-amber-500 text-white font-black text-lg sm:text-xl uppercase px-12 py-5 rounded-full tracking-wide shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 glowing-red">
+          <i data-lucide="download-cloud" class="w-5 h-5"></i> SECURE IMMEDIATE MASTER PORTAL ACCESS
+        </a>
+        
+        <p class="text-[10px] text-slate-500 font-mono uppercase tracking-widest flex items-center gap-1.5 mt-2">
+          <i data-lucide="lock" class="w-3.5 h-3.5 text-slate-500"></i> VERIFIED ENCRYPTED CONNECTION SECURED BY CLICKBANK
+        </p>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 border-t border-slate-800/80 mt-10 pt-8 text-slate-500 text-center text-xs font-mono">
+        <div class="flex flex-col items-center">
+          <i data-lucide="shield-check" class="w-5 h-5 text-sky-400 mb-1.5"></i>
+          <span class="text-[10px] text-slate-400 uppercase font-bold">60-Day Guarantee</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <i data-lucide="award" class="w-5 h-5 text-sky-400 mb-1.5"></i>
+          <span class="text-[10px] text-slate-400 uppercase font-bold">Top Independent Pick</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <i data-lucide="wrench" class="w-5 h-5 text-sky-400 mb-1.5"></i>
+          <span class="text-[10px] text-slate-400 uppercase font-bold">100% DIY Beginner Friendly</span>
         </div>
       </div>
 
-      <div class="grid items-center gap-10 py-10 lg:grid-cols-12 lg:py-16">
-        <div class="lg:col-span-7">
-          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-2 text-sm font-bold uppercase tracking-[0.25em] text-red-300">
-            <i data-lucide="alert-triangle" class="h-4 w-4"></i>
-            Warning: clean water may disappear before power does
-          </div>
+    </div>
 
-          <h1 class="max-w-4xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-7xl">
-            Secure a reliable supply of clean drinking water
-            <span class="text-red-400">without electricity or expensive plumbing.</span>
-          </h1>
-
-          <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
-            When the grid fails, water pressure can vanish fast—and most households have only a short window before stored water, nearby taps, and delivery options become uncertain. SmartWaterBox is designed to help you stay ahead of that moment.
-          </p>
-
-          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href="https://example.com/affiliate" class="btn-glow inline-flex items-center justify-center gap-3 rounded-full bg-red-500 px-7 py-4 text-base font-extrabold text-white transition hover:bg-red-400 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2 focus:ring-offset-black">
-              Watch The Video Presentation Now ➔
-            </a>
-            <div class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-4 text-sm text-slate-300">
-              <i data-lucide="shield-check" class="h-5 w-5 text-emerald-400"></i>
-              Free presentation explains how it works
-            </div>
-          </div>
-
-          <div class="mt-10 grid gap-4 sm:grid-cols-3">
-            <div class="glass rounded-2xl p-5">
-              <p class="text-sm font-semibold text-slate-200">Off-grid ready</p>
-              <p class="mt-2 text-sm leading-6 text-slate-400">Built for emergencies, outages, and self-reliant living.</p>
-            </div>
-            <div class="glass rounded-2xl p-5">
-              <p class="text-sm font-semibold text-slate-200">Compact footprint</p>
-              <p class="mt-2 text-sm leading-6 text-slate-400">Designed to fit into a home, cabin, garage, or prep area.</p>
-            </div>
-            <div class="glass rounded-2xl p-5">
-              <p class="text-sm font-semibold text-slate-200">Everyday utility</p>
-              <p class="mt-2 text-sm leading-6 text-slate-400">Useful for household security, disaster prep, and garden support.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="lg:col-span-5">
-          <div class="glass relative overflow-hidden rounded-[2rem] p-4 md:p-5">
-            <div class="absolute inset-x-0 top-0 h-1 accent-line"></div>
-            <img data-ai="generate" data-slot="smartwaterbox-hero" data-prompt="A rugged compact off-grid water security box in a realistic home preparedness setting, clean industrial design, stainless steel and matte black materials, water hoses and filtration elements, dramatic lighting, no text, no labels" data-ar="4:3" src="https://cdn.landing-page.io/ai-landingpage/html-generate/5794b8ca-d650-4421-90e8-c9e753f823ec/images/smartwaterbox-hero-7cb415b784774c68bd5b53a40cf01337.png" alt="SmartWaterBox system illustration" class="h-[340px] w-full rounded-[1.5rem] object-cover md:h-[430px]">
-            <div class="mt-4 grid gap-3 sm:grid-cols-2">
-              <div class="rounded-2xl border border-white/10 bg-black/30 p-4">
-                <div class="flex items-center gap-2 text-sm font-semibold text-slate-200">
-                  <i data-lucide="zap-off" class="h-4 w-4 text-red-400"></i>
-                  No electricity required
-                </div>
-                <p class="mt-2 text-sm leading-6 text-slate-400">Keep water access moving when the power goes out.</p>
-              </div>
-              <div class="rounded-2xl border border-white/10 bg-black/30 p-4">
-                <div class="flex items-center gap-2 text-sm font-semibold text-slate-200">
-                  <i data-lucide="wrench" class="h-4 w-4 text-amber-300"></i>
-                  Simple setup
-                </div>
-                <p class="mt-2 text-sm leading-6 text-slate-400">Made for non-experts who want practical preparedness.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mx-auto max-w-7xl px-6 pb-16 lg:px-8">
-      <div class="grid gap-6 lg:grid-cols-3">
-        <div class="glass rounded-[2rem] p-7 lg:col-span-2">
-          <h2 class="text-2xl font-black tracking-tight text-white sm:text-3xl">Why standard solutions can leave families exposed</h2>
-          <div class="mt-5 space-y-4 text-base leading-8 text-slate-300">
-            <p>
-              Typical filters are often built to improve taste or handle limited contamination, but many still depend on pressurized plumbing, replacement cartridges, or a reliable source of incoming water. Bottled water can buy time, yet it is bulky, costly to store in meaningful quantities, and easy to run through far faster than expected once a crisis lasts longer than a day or two.
-            </p>
-            <p>
-              SmartWaterBox is positioned as a compact off-grid water security solution for people who want more control over their own resilience. It is intended to support home self-reliance, disaster preparedness, and even garden use—so your water strategy is not limited to short-term panic buying or fragile infrastructure.
-            </p>
-          </div>
-        </div>
-
-        <div class="glass rounded-[2rem] p-7">
-          <div class="flex items-center gap-3">
-            <i data-lucide="files" class="h-5 w-5 text-yellow-300"></i>
-            <h3 class="text-xl font-black text-white">What this page is about</h3>
-          </div>
-          <ul class="mt-5 space-y-4 text-sm leading-7 text-slate-300">
-            <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-1 h-4 w-4 shrink-0 text-emerald-400"></i><span>Helping you prepare for outages, boil notices, and supply disruptions.</span></li>
-            <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-1 h-4 w-4 shrink-0 text-emerald-400"></i><span>Showing a practical, compact approach to water security at home.</span></li>
-            <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-1 h-4 w-4 shrink-0 text-emerald-400"></i><span>Explaining the system through a free presentation/video.</span></li>
-          </ul>
-
-          <div class="mt-7 rounded-2xl border border-white/10 bg-white/5 p-5">
-            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-red-300">Urgency</p>
-            <p class="mt-2 text-sm leading-7 text-slate-300">
-              Once contamination warnings, rationing, or pressure loss begin, options shrink quickly. The goal is to have a plan before the emergency turns into a shortage.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mx-auto max-w-7xl px-6 pb-20 lg:px-8">
-      <div class="glass rounded-[2rem] p-8 md:p-10">
-        <div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
-          <div class="max-w-3xl">
-            <div class="inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-300">
-              <i data-lucide="badge-info" class="h-4 w-4"></i>
-              Benefits at a glance
-            </div>
-            <h2 class="mt-5 text-3xl font-black tracking-tight text-white sm:text-4xl">Peace of mind when water becomes uncertain</h2>
-            <p class="mt-4 text-base leading-8 text-slate-300">
-              The smartest preparedness systems do one thing well: reduce vulnerability. SmartWaterBox is presented as a straightforward option for households that want less dependence on fragile utilities and fewer worries about what happens when supply conditions deteriorate.
-            </p>
-          </div>
-
-          <div class="grid gap-4 md:min-w-[320px]">
-            <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
-              <div class="flex items-center gap-3">
-                <i data-lucide="activity" class="h-5 w-5 text-red-400"></i>
-                <h3 class="font-bold text-white">Grid-independent operation</h3>
-              </div>
-              <p class="mt-2 text-sm leading-6 text-slate-400">Designed to function without relying on electricity, giving you water security when the grid is down.</p>
-            </div>
-            <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
-              <div class="flex items-center gap-3">
-                <i data-lucide="circle-play" class="h-5 w-5 text-amber-300"></i>
-                <h3 class="font-bold text-white">Simple setup for non-experts</h3>
-              </div>
-              <p class="mt-2 text-sm leading-6 text-slate-400">Clear, practical operation for people who want readiness without complicated plumbing knowledge.</p>
-            </div>
-            <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
-              <div class="flex items-center gap-3">
-                <i data-lucide="heart-pulse" class="h-5 w-5 text-emerald-400"></i>
-                <h3 class="font-bold text-white">Peace of mind</h3>
-              </div>
-              <p class="mt-2 text-sm leading-6 text-slate-400">Helps reduce stress around contamination, boil notices, rationing, and short-term shortages.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
-      <div class="grid gap-6 lg:grid-cols-12">
-        <div class="glass rounded-[2rem] p-8 lg:col-span-8">
-          <h2 class="text-3xl font-black tracking-tight text-white sm:text-4xl">Free presentation: see how SmartWaterBox works</h2>
-          <p class="mt-4 max-w-3xl text-base leading-8 text-slate-300">
-            Before you decide what your household would do during a long outage or water interruption, watch the free video presentation. It walks through the system, how it supports off-grid water security, and why having a compact solution in place can matter when normal supply chains become unreliable.
-          </p>
-          <div class="mt-6 flex flex-wrap gap-3 text-sm text-slate-300">
-            <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Home preparedness</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Disaster readiness</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Garden support</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">No-electricity strategy</span>
-          </div>
-        </div>
-
-        <div class="glass rounded-[2rem] p-8 lg:col-span-4">
-          <div class="flex items-center gap-3">
-            <i data-lucide="video" class="h-6 w-6 text-red-400"></i>
-            <h3 class="text-2xl font-black text-white">Watch now</h3>
-          </div>
-          <p class="mt-4 text-sm leading-7 text-slate-300">
-            Learn what makes this compact system different and why it can be a smart part of a real-world water preparedness plan.
-          </p>
-          <a href="https://example.com/affiliate" class="mt-6 inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-red-500 to-rose-500 px-6 py-4 text-lg font-extrabold text-white transition hover:from-red-400 hover:to-rose-400 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2 focus:ring-offset-black">
-            Watch The Video Presentation Now ➔
-          </a>
-          <p class="mt-4 text-center text-xs leading-6 text-slate-400">No fluff. Just a clear explanation of the system and how it supports water security.</p>
-        </div>
-      </div>
-    </section>
   </main>
+
+  <footer class="bg-slate-950 text-slate-600 text-[11px] py-12 px-6 border-t border-slate-900 font-mono">
+    <div class="max-w-6xl mx-auto space-y-6 text-center">
+      
+      <div class="flex justify-center gap-6 font-bold uppercase tracking-wider text-slate-500">
+        <a href="https://f2df22ydoofkysfkkhuo5z0m2b.hop.clickbank.net" target="_blank" rel="noopener" class="hover:text-slate-400 transition">Privacy Policy</a>
+        <span>•</span>
+        <a href="https://f2df22ydoofkysfkkhuo5z0m2b.hop.clickbank.net" target="_blank" rel="noopener" class="hover:text-slate-400 transition">Terms of Service</a>
+        <span>•</span>
+        <a href="https://f2df22ydoofkysfkkhuo5z0m2b.hop.clickbank.net" target="_blank" rel="noopener" class="hover:text-slate-400 transition">Contact Support</a>
+      </div>
+
+      <p class="max-w-4xl mx-auto leading-relaxed text-slate-600 font-sans">
+        ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales, Inc., a Delaware corporation located at 1444 S. Entertainment Ave., Suite 410 Boise, ID 83709, USA and used by permission. ClickBank's role as retailer does not constitute an endorsement, approval or review of these products or any claim, statement or opinion used in promotion of these products.
+      </p>
+
+      <p class="text-[10px] text-slate-700">
+        © 2026 SmartWaterBox™ Systems Inc. All Rights Reserved. Designed exclusively for US Independent Off-Grid Research.
+      </p>
+    </div>
+  </footer>
 
   <script>
     lucide.createIcons();
