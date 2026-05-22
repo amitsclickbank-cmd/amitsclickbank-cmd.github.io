@@ -32,7 +32,6 @@
             padding-bottom: 60px;
         }
 
-        /* Compliant Header */
         header {
             background-color: var(--bg-card);
             border-bottom: 1px solid #e5e7eb;
@@ -54,7 +53,6 @@
             padding: 24px;
         }
 
-        /* Hero Layout */
         .hero-block {
             background: var(--bg-card);
             padding: 40px;
@@ -105,13 +103,13 @@
 
         .full-width-media {
             width: 100%;
-            max-width: 600px;
+            max-width: 750px;
             display: block;
-            margin: 20px auto;
-            border-radius: 8px;
+            margin: 24px auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
         }
 
-        /* Bullet Configurations */
         .feature-list {
             list-style: none;
         }
@@ -141,7 +139,6 @@
             font-size: 0.75rem;
         }
 
-        /* High Impact Call-to-Action Buttons */
         .btn-anchor {
             display: block;
             background-color: var(--primary-accent);
@@ -163,43 +160,49 @@
             box-shadow: 0 12px 24px rgba(59, 130, 246, 0.35);
         }
 
-        /* Ratings */
-        .ratings-block {
-            text-align: center;
-            margin: 20px 0;
-            color: var(--text-muted);
+        .alert-box {
+            background-color: var(--bg-alert);
+            border-left: 4px solid var(--danger-red);
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 32px;
         }
-        .star-group {
-            display: inline-block;
-            margin: 0 10px;
-        }
-        .star {
-            color: #fbbf24;
+
+        .alert-box h2 {
+            color: #991b1b;
             font-size: 1.4rem;
-        }
-        .rating-label {
-            display: block;
-            font-weight: bold;
-            font-size: 0.9rem;
-            text-transform: uppercase;
+            margin-bottom: 12px;
         }
 
-        /* Feature Icons */
-        .icon-check {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            background: #111827;
-            color: white;
-            border-radius: 50%;
+        .feature-banner {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            padding: 40px;
+            border-radius: 16px;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        .pricing-header {
             text-align: center;
-            line-height: 16px;
-            font-size: 10px;
-            margin-right: 8px;
-            vertical-align: middle;
+            margin: 48px 0 24px 0;
         }
 
-        /* ... remaining CSS styles from previous turn ... */
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            padding: 48px 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            margin-top: 80px;
+            border-top: 1px solid #1f2937;
+            line-height: 1.7;
+        }
+
+        footer .legal-text {
+            max-width: 850px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -211,59 +214,4 @@
     <div class="wrapper">
         
         <section class="hero-block">
-            <h1>Do You Wake Up Every Morning With Stiff Neck Pain or a Heavy Headache?</h1>
-            <p class="hero-subtitle">Discover how this revolutionary 'Butterfly Design' memory foam technology contours precisely around your cervical spine to eliminate sleep tension and restore natural airflow track structures.</p>
-            
-            <div class="grid-layout">
-                <div>
-                    <img src="foam-pillow2.jpeg" alt="Butterfly design ergonomic pillow detail" class="responsive-media">
-                </div>
-                <div>
-                    <ul class="feature-list">
-                        <li><strong>Morning Discomfort Eliminated:</strong> Completely unloads continuous straining pressure weight off your shoulders and neck muscles.</li>
-                        <li><strong>Breathe Seamlessly:</strong> Intelligently supports natural airway alignment to heavily lower night snoring symptoms.</li>
-                        <li><strong>Adapts to Any Position:</strong> Ergonomically responsive zones conform to back, side, or stomach sleeping tracks.</li>
-                        <li><strong>Risk-Free Trial Protection:</strong> Secured with a full 60-Day Satisfaction Money-Back Guarantee.</li>
-                    </ul>
-                    <a href="https://7c62b3j9yvj9qo87lgn7e7wczu.hop.clickbank.net" class="btn-anchor">Claim Your 75% Off Promo Today</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="feature-banner">
-            <h2 style="color: #111827; font-size: 2.2rem; margin-bottom: 8px; text-align: center;">Transform Your Sleep Tonight</h2>
-            <p style="margin-bottom: 32px; text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto;">Experience what true comfort feels like. The revolutionary butterfly design cradles your head and neck in perfect alignment, turning restless nights into deep, pain-free, rejuvenating sleep.</p>
-            
-            <a href="https://7c62b3j9yvj9qo87lgn7e7wczu.hop.clickbank.net" class="btn-anchor" style="max-width: 300px; margin: 24px auto;">Get 75% Off</a>
-
-            <div class="ratings-block">
-                <div class="star-group">
-                    <span class="star">★★★★★</span>
-                    <span class="rating-label">Comfort</span>
-                </div>
-                <div class="star-group">
-                    <span class="star">★★★★★</span>
-                    <span class="rating-label">Support</span>
-                </div>
-                <div class="star-group">
-                    <span class="star">★★★★★</span>
-                    <span class="rating-label">Ergonomics</span>
-                </div>
-            </div>
-
-            <img src="foam-pillow4.jpeg" alt="3D illustration of orthopedic pillow showing internal support" class="full-width-media">
-
-            <p style="text-align: center; font-weight: bold; font-size: 1.1rem; text-transform: uppercase; margin-top: -10px;">Shoulder Arch Release</p>
-
-            <div style="text-align: center; margin-top: 20px;">
-                <p style="display: inline-block; margin: 0 15px;"><span class="icon-check">✓</span> Faster muscle recovery</p>
-                <p style="display: inline-block; margin: 0 15px;"><span class="icon-check">✓</span> Reduced tension</p>
-                <p style="display: inline-block; margin: 0 15px;"><span class="icon-check">✓</span> Better posture</p>
-            </div>
-            
-        </section>
-
-        </div>
-
-    </body>
-</html>
+            <h1>Do You Wake
