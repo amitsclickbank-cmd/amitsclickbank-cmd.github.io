@@ -32,7 +32,7 @@
             padding-bottom: 60px;
         }
 
-        /* Compliant Header */
+        /* Compliant Header - No Brand Name Used */
         header {
             background-color: var(--bg-card);
             border-bottom: 1px solid #e5e7eb;
@@ -101,6 +101,15 @@
             box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
             display: block;
             margin: 0 auto;
+        }
+
+        .full-width-media {
+            width: 100%;
+            max-width: 750px;
+            display: block;
+            margin: 24px auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
         }
 
         /* Bullet Configurations */
@@ -172,11 +181,12 @@
 
         /* Feature Banner Section */
         .feature-banner {
-            background: #f0fdf4;
-            border: 1px solid #bbf7d0;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
             padding: 40px;
             border-radius: 16px;
             margin-bottom: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
         }
 
         /* Metric Grid Components */
@@ -203,123 +213,12 @@
             margin-bottom: 4px;
         }
 
-        /* Pricing Architecture */
         .pricing-header {
             text-align: center;
             margin: 48px 0 24px 0;
         }
 
-        .pricing-deck {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-            gap: 24px;
-        }
-
-        .tier-card {
-            background: #ffffff;
-            border: 2px solid #e5e7eb;
-            border-radius: 16px;
-            padding: 32px 24px;
-            text-align: center;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s ease;
-        }
-
-        .tier-card:hover {
-            transform: scale(1.02);
-        }
-
-        .tier-card.featured {
-            border-color: var(--primary-accent);
-            box-shadow: 0 12px 30px rgba(59, 130, 246, 0.08);
-        }
-
-        .tier-badge {
-            background: #374151;
-            color: #ffffff;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 6px 16px;
-            position: absolute;
-            top: -14px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .tier-card.featured .tier-badge {
-            background: var(--primary-accent);
-        }
-
-        .tier-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #111827;
-            margin-bottom: 8px;
-        }
-
-        .pricing-value-group {
-            margin: 20px 0;
-        }
-
-        .retail-strike {
-            text-decoration: line-through;
-            color: #9ca3af;
-            font-size: 0.95rem;
-            display: block;
-        }
-
-        .promo-price {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #111827;
-            display: block;
-            line-height: 1.1;
-            margin-top: 4px;
-        }
-
-        .tier-desc {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
-
-        .tier-btn {
-            background-color: var(--primary-accent);
-            color: #ffffff;
-            padding: 12px 24px;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 8px;
-            display: block;
-            transition: background 0.15s ease;
-        }
-
-        .tier-btn:hover {
-            background-color: var(--primary-hover);
-        }
-
-        .tier-card.featured .tier-btn {
-            background-color: var(--success-green);
-        }
-
-        .tier-card.featured .tier-btn:hover {
-            background-color: #059669;
-        }
-
-        .secure-lock {
-            font-size: 0.85rem;
-            color: var(--success-green);
-            margin-top: 12px;
-            font-weight: 600;
-        }
-
-        /* Compliant Footer */
+        /* Compliant Footer - No Brand Name Contained */
         footer {
             background-color: #111827;
             color: #9ca3af;
@@ -351,7 +250,7 @@
             
             <div class="grid-layout">
                 <div>
-                    <img src="foam pillow6.jpeg" alt="Ergonomic head and neck posture positioning" class="responsive-media">
+                    <img src="Foam%20pillow1.jpeg" alt="Ergonomic head and neck posture positioning" class="responsive-media">
                 </div>
                 <div>
                     <ul class="feature-list">
@@ -371,13 +270,22 @@
             <br>
             <ul class="feature-list" style="color: #1f2937;">
                 <li><strong>Cervical Nerve Compression:</strong> Leaving a physical gap beneath your neck causes your vertebrae to pinch vulnerable nerve paths, radiating pain out into your arms and back.</li>
-                <li><strong>Airway Route Obstructive Colapse:</strong> When your head sinks down at an unnatural angle, throat muscles slide backward, restricting standard oxygen channels and triggering loud snoring.</li>
+                <li><strong>Airway Route Obstructive Collapse:</strong> When your head sinks down at an unnatural angle, throat muscles slide backward, restricting standard oxygen channels and triggering loud snoring.</li>
             </ul>
         </section>
 
-        <section class="feature-banner">
-            <h2 style="color: #111827; font-size: 1.8rem; margin-bottom: 12px; text-align: center;">Breathe Freely, Sleep Silently via Shoulder Arch Release Technology</h2>
-            <p style="margin-bottom: 32px; text-align: center; color: var(--text-muted);">Molded using high-density, memory foam structures, this configuration dynamically balances upper body loading zones.</p>
+        <section class="feature-banner" style="background-color: #ffffff;">
+            <h2 style="color: #111827; font-size: 2.2rem; margin-bottom: 8px; text-align: center;">Transform Your Sleep Tonight</h2>
+            <p style="margin-bottom: 24px; text-align: center; color: var(--text-muted); max-width: 750px; margin: 0 auto;">Experience what true comfort feels like. The revolutionary butterfly design cradles your head and neck in perfect alignment, turning restless nights into deep, pain-free, rejuvenating sleep.</p>
+            
+            <img src="Foam%20pillow2.jpeg" alt="Transform Your Sleep Support Diagrams" class="full-width-media">
+            
+            <a href="https://7c62b3j9yvj9qo87lgn7e7wczu.hop.clickbank.net" class="btn-anchor" style="max-width: 450px; margin: 32px auto 10px auto;">Get 75% Off Now</a>
+        </section>
+
+        <section class="feature-banner" style="background-color: #faf5ff; border: 1px solid #e9d5ff;">
+            <h2 style="color: #111827; font-size: 2rem; margin-bottom: 12px; text-align: center;">Breathe Freely, Sleep Silently via Shoulder Arch Release Technology</h2>
+            <p style="margin-bottom: 24px; text-align: center; color: var(--text-muted); max-width: 750px; margin: 0 auto;">Molded using high-density, memory foam structures, this configuration dynamically balances upper body loading zones to keep airways clear and oxygen flow optimized.</p>
             
             <div class="grid-layout">
                 <div>
@@ -388,11 +296,11 @@
                     </ul>
                 </div>
                 <div>
-                    <img src="foam pillow4.jpeg" alt="Airflow clearance structural diagram" class="responsive-media">
+                    <img src="foam%20pillow4.jpeg" alt="Airflow clearance structural diagram" class="responsive-media">
                 </div>
             </div>
             
-            <a href="https://7c62b3j9yvj9qo87lgn7e7wczu.hop.clickbank.net" class="btn-anchor" style="background-color: var(--success-green); box-shadow: 0 10px 20px rgba(16, 185, 129, 0.25);">Experience Restorative Sleep Tonight</a>
+            <a href="https://7c62b3j9yvj9qo87lgn7e7wczu.hop.clickbank.net" class="btn-anchor" style="background-color: #a855f7; box-shadow: 0 10px 20px rgba(168, 85, 247, 0.25); max-width: 450px; margin: 32px auto 0 auto;">Experience Restorative Sleep Tonight</a>
         </section>
 
         <section style="margin: 48px 0; text-align: center;">
@@ -413,59 +321,18 @@
 
         <section>
             <div class="pricing-header">
-                <h2 style="font-size: 2rem; color: #111827;">Select Your Strategic Configuration</h2>
-                <p style="color: var(--text-muted); margin-top: 4px;">Unlock heavy promotional savings today. Every order includes end-to-end checkout encryption.</p>
+                <h2 style="font-size: 2.2rem; color: #111827;">Choose The Ideal Set For You!</h2>
+                <p style="color: var(--text-muted); margin-top: 4px;">Unlock maximum promotional savings. Select your package structure to proceed to secure encrypted checkout.</p>
             </div>
             
-            <div class="pricing-deck">
-                <div class="tier-card">
-                    <span class="tier-badge">Starter Pack</span>
-                    <div>
-                        <div class="tier-title">1 Ergonomic Pillow</div>
-                        <div class="pricing-value-group">
-                            <span class="retail-strike">Retail Price: $149.98</span>
-                            <span class="promo-price">$59.99</span>
-                        </div>
-                        <p class="tier-desc">Perfect single configuration to evaluate corrective neck support structures.</p>
-                    </div>
-                    <div>
-                        <div class="secure-lock">✓ 60-Day Guarantee Attached</div>
-                        <a href="https://7c62b3j9yvj9qo87lgn7e7wczu.hop.clickbank.net" class="tier-btn" style="margin-top: 16px;">Buy Now</a>
-                    </div>
-                </div>
-
-                <div class="tier-card featured">
-                    <span class="tier-badge">Family Pack</span>
-                    <div>
-                        <div class="tier-title" style="color: var(--primary-accent);">3 + 1 FREE Value Pack</div>
-                        <div class="pricing-value-group">
-                            <span class="retail-strike">Retail Price: $599.84</span>
-                            <span class="promo-price" style="color: var(--success-green);">$149.96</span>
-                        </div>
-                        <p class="tier-desc">Our maximum volume tier. Complete structural room protection layout values.</p>
-                    </div>
-                    <div>
-                        <div class="secure-lock">✓ Maximum Direct Savings Applied</div>
-                        <a href="https://7c62b3j9yvj9qo87lgn7e7wczu.hop.clickbank.net" class="tier-btn" style="margin-top: 16px;">Buy Now</a>
-                    </div>
-                </div>
-
-                <div class="tier-card">
-                    <span class="tier-badge">Most Popular</span>
-                    <div>
-                        <div class="tier-title">2 Ergonomic Pillows</div>
-                        <div class="pricing-value-group">
-                            <span class="retail-strike">Retail Price: $302.97</span>
-                            <span class="promo-price">$99.98</span>
-                        </div>
-                        <p class="tier-desc">Engineered twin-room setup for partners targeting immediate posture fixes.</p>
-                    </div>
-                    <div>
-                        <div class="secure-lock">✓ 60-Day Guarantee Attached</div>
-                        <a href="https://7c62b3j9yvj9qo87lgn7e7wczu.hop.clickbank.net" class="tier-btn" style="margin-top: 16px;">Buy Now</a>
-                    </div>
-                </div>
+            <div style="text-align: center;">
+                <a href="https://7c62b3j9yvj9qo87lgn7e7wczu.hop.clickbank.net" style="text-decoration: none; display: block;">
+                    <img src="foam%20pillow3.jpeg" alt="Select Pillow Packages and Pricing Configuration" class="full-width-media" style="max-width: 850px; border: 1px solid #d1d5db;">
+                </a>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;">*Click on the packages above to instantly apply the 60-Day Money-Back Guarantee.</p>
             </div>
+            
+            <a href="https://7c62b3j9yvj9qo87lgn7e7wczu.hop.clickbank.net" class="btn-anchor" style="background-color: var(--success-green); box-shadow: 0 10px 20px rgba(16, 185, 129, 0.25); max-width: 500px; margin: 40px auto 0 auto;">Proceed To Secure Checkout</a>
         </section>
 
     </div>
