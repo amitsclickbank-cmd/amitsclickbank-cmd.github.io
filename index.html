@@ -546,13 +546,11 @@ function handleEmail() {
     alert('Please enter a valid email address.');
     return;
   }
-  // Meta Pixel — Lead event fire करें
   fbq('track', 'Lead');
- 
-  // यहाँ आप email को अपने email service (Mailchimp, Systeme.io etc) में save कर सकते हो
-  // अभी के लिए user को offer page पर redirect करते हैं
   alert('🎉 Your discount has been sent! Redirecting you now...');
-  window.open('https://bb47a6s6ytdktr5cpcpfq7-ezv.hop.clickbank.net/?cbpage=lp1, '_blank');
+  
+  // ✅ यह use करें
+  window.location.href = 'https://bb47a6s6ytdktr5cpcpfq7-ezv.hop.clickbank.net/?cbpage=lp1';
 }
 </script>
  
