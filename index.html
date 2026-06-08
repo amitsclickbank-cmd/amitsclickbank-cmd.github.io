@@ -532,43 +532,32 @@ async function handleEmail() {
 
     const email = document.getElementById("emailInput").value.trim();
 
-    if (!email) {
-        alert("Please enter your email address");
-        return;
-    }
+    alert("Email entered: " + email);
 
     try {
 
-        await fetch(
+        const response = await fetch(
             "https://script.google.com/macros/s/AKfycbx03Y9ixrwgQmnqBib33mgE_gt6itB7ZQCZhdkM4CE/exec",
             {
                 method: "POST",
-                mode: "no-cors",
-                headers: {
-                    "Content-Type": "text/plain"
-                },
                 body: JSON.stringify({
                     email: email
                 })
             }
         );
 
+        alert("Request sent");
+
         fbq('track', 'Lead');
-
-        alert("🎉 Thank you! Your discount has been sent.");
-
-        window.location.href =
-        "https://bb47a6s6ytdktr5cpcpfq7-ezv.hop.clickbank.net/?cbpage=lp1";
 
     } catch (error) {
 
-    console.error("FULL ERROR:", error);
-
-    alert(error);
+        alert("ERROR: " + error);
 
     }
 }
 </script>
+
 
 
  
