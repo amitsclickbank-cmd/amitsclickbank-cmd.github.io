@@ -539,21 +539,57 @@ fbq('track', 'ViewContent');
 </footer>
  
 <script>
-// Email capture handler
-function handleEmail() {
+async function handleEmail() {
+
   const email = document.getElementById('emailInput').value;
+
   if (!email || !email.includes('@')) {
     alert('Please enter a valid email address.');
     return;
   }
-  fbq('track', 'Lead');
-  alert('🎉 Your discount has been sent! Redirecting you now...');
-  
-  // ✅ यह use करें
-  window.location.href = "https://bb47a6s6ytdktr5cpcpfq7-ezv.hop.clickbank.net/?cbpage=lp1";
+
+  try {
+
+    const response = await fetch(
+      'https://script.google.com/macros/s/AKfycbx03Y9ixrwgQmnqBib33mgE_gt6itB7ZQCZhdkM4CE/exec',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain'
+        },
+        body: JSON.stringify({
+          email: email
+        })
+      }
+    );
+
+    const result = await response.text();
+
+    if (result === 'Success') {
+
+      fbq('track', 'Lead');
+
+      alert('🎉 Thank you! Your discount has been sent.');
+
+      window.location.href =
+      'https://bb47a6s6ytdktr5cpcpfq7-ezv.hop.clickbank.net/?cbpage=lp1';
+
+    }
+
+  } catch (error) {
+
+    console.log(error);
+    alert('Something went wrong');
+
+  }
+
 }
 </script>
+
  
 </body>
 </html>
+
+
+
 
