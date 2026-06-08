@@ -529,32 +529,35 @@ src="https://www.facebook.com/tr?id=927163340366759&ev=PageView&noscript=1"
  
 <script>
 async function handleEmail() {
+  const email = document.getElementById("emailInput").value.trim();
+  
+  if (!email || !email.includes("@")) {
+    alert("Please enter a valid email address.");
+    return;
+  }
 
-    const email = document.getElementById("emailInput").value.trim();
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx03Y9ixrwgQmnqBib33mgE_gt6itB7ZQCZhdkM4CE/exec";
 
-    alert("Email entered: " + email);
+  try {
+    // ✅ mode: 'no-cors' — CORS issue fix
+    await fetch(SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",      // 👈 yahi missing tha
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email: email })
+    });
 
-    try {
+    // no-cors mein response nahi milta, but data chala jaata hai
+    alert("✅ Thank you! Your discount has been sent to: " + email);
+    document.getElementById("emailInput").value = "";
+    
+    fbq('track', 'Lead');
 
-        const response = await fetch(
-            "https://script.google.com/macros/s/AKfycbx03Y9ixrwgQmnqBib33mgE_gt6itB7ZQCZhdkM4CE/exec",
-            {
-                method: "POST",
-                body: JSON.stringify({
-                    email: email
-                })
-            }
-        );
-
-        alert("Request sent");
-
-        fbq('track', 'Lead');
-
-    } catch (error) {
-
-        alert("ERROR: " + error);
-
-    }
+  } catch (error) {
+    alert("❌ Something went wrong. Please try again.\n" + error);
+  }
 }
 </script>
 
