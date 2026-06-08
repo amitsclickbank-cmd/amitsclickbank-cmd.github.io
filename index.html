@@ -562,8 +562,9 @@ async function handleEmail() {
 
     } catch (error) {
 
-        console.log(error);
-        alert("Submission failed.");
+    console.error("FULL ERROR:", error);
+
+    alert(error);
 
     }
 }
