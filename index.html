@@ -256,6 +256,35 @@ src="https://www.facebook.com/tr?id=927163340366759&ev=PageView&noscript=1"
   }
  
   .cta-btn:hover .arrow { transform: translateX(4px); }
+
+  /* ── CHANGE 1: 70% OFF BADGE BELOW CTA ── */
+  .discount-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #e63946, #c1121f);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 20px rgba(230,57,70,0.35);
+    animation: pulse-badge 2s ease-in-out infinite;
+  }
+
+  .discount-badge .strike {
+    text-decoration: line-through;
+    opacity: 0.7;
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  @keyframes pulse-badge {
+    0%, 100% { transform: scale(1); box-shadow: 0 6px 20px rgba(230,57,70,0.35); }
+    50%       { transform: scale(1.03); box-shadow: 0 8px 28px rgba(230,57,70,0.50); }
+  }
  
   .guarantee {
     font-size: 13px;
@@ -322,7 +351,7 @@ src="https://www.facebook.com/tr?id=927163340366759&ev=PageView&noscript=1"
     letter-spacing: 1px;
   }
  
-  /* ── EMAIL CAPTURE (Optional) ── */
+  /* ── EMAIL CAPTURE ── */
   .email-section {
     padding: 56px 20px;
     display: flex;
@@ -369,6 +398,7 @@ src="https://www.facebook.com/tr?id=927163340366759&ev=PageView&noscript=1"
  
   .email-form input:focus { border-color: var(--gold); }
  
+  /* ── CHANGE 2: Email button text updated ── */
   .email-form button {
     padding: 14px 28px;
     background: var(--navy);
@@ -444,10 +474,6 @@ src="https://www.facebook.com/tr?id=927163340366759&ev=PageView&noscript=1"
  
   <!-- Pillow Visual -->
   <div class="pillow-wrap">
-    <!-- अगर आपके पास pillow की image है तो नीचे src में उसका URL डालें -->
-    <!-- <img class="pillow-img" src="YOUR_PILLOW_IMAGE_URL" alt="Butterfly Memory Foam Pillow"> -->
- 
-    <!-- Image नहीं है तो यह placeholder दिखेगा -->
     <div class="pillow-placeholder">
       <span class="emoji">🦋</span>
       <p>Butterfly Memory Foam Pillow</p>
@@ -478,6 +504,12 @@ src="https://www.facebook.com/tr?id=927163340366759&ev=PageView&noscript=1"
       Yes! I Want My Pillow Now
       <span class="arrow">→</span>
     </a>
+
+    <!-- CHANGE 1: 70% Off discount badge below CTA button -->
+    <div class="discount-badge">
+      🔥 Get 70% Off Today &nbsp;— &nbsp;<span class="strike"></span>
+    </div>
+
     <p class="guarantee">🔒 Secure Order &nbsp;|&nbsp; 60-Day Money Back Guarantee</p>
   </div>
  
@@ -506,13 +538,14 @@ src="https://www.facebook.com/tr?id=927163340366759&ev=PageView&noscript=1"
   <p class="proof-count">OVER 10,247 FIVE-STAR REVIEWS</p>
 </section>
  
-<!-- EMAIL CAPTURE (Optional — delete if not needed) -->
+<!-- EMAIL CAPTURE -->
 <section class="email-section">
   <h2>Get an Exclusive Discount Before You Go</h2>
   <p>Enter your email and we'll send you a special offer instantly.</p>
   <div class="email-form">
     <input type="email" id="emailInput" placeholder="Enter your email address">
-    <button onclick="handleEmail()">Get My Discount →</button>
+    <!-- CHANGE 2: Button text updated to mention 70% discount -->
+    <button onclick="handleEmail()">Get Your 70% Discount →</button>
   </div>
 </section>
  
@@ -539,17 +572,15 @@ async function handleEmail() {
   const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyDZVhUzuvpclA_V9UNKHo4MyzN-cXR_BIzcZzeKahduCw4KQQ2DOtslx3rx1QO0_hN/exec";
 
   try {
-    // ✅ mode: 'no-cors' — CORS issue fix
     await fetch(SCRIPT_URL, {
       method: "POST",
-      mode: "no-cors",      // 👈 yahi missing tha
+      mode: "no-cors",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({ email: email })
     });
 
-    // no-cors mein response nahi milta, but data chala jaata hai
     alert("✅ Thank you! Your discount has been sent to: " + email);
     document.getElementById("emailInput").value = "";
     
@@ -561,12 +592,5 @@ async function handleEmail() {
 }
 </script>
 
-
-
- 
 </body>
 </html>
-
-
-
-
