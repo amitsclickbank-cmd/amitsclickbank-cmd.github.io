@@ -1,4 +1,60 @@
 <!DOCTYPE html>
+<html>
+<head>
+
+  <!-- Google tag (already installed) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18233503108"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18233503108');
+  </script>
+
+  <!-- Meta Pixel (already installed) -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '120251386695030159');
+  fbq('track', 'ViewContent');
+  </script>
+
+  <!-- Redirect -->
+  <meta http-equiv="refresh" 
+        content="0; url=https://bb47a6s6ytdktr5cpcpfq7-ezv.hop.clickbank.net/?cbpage=lp1">
+
+</head>
+<body>
+  <script>
+    // Google Ads ViewContent event fire karo
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18233503108',
+      'value': 54.0,
+      'currency': 'USD'
+    });
+
+    // GCLID capture karke ClickBank mein pass karo
+    function getParam(name) {
+      return new URLSearchParams(window.location.search).get(name);
+    }
+    const gclid = getParam('gclid');
+    const cbBase = "https://bb47a6s6ytdktr5cpcpfq7-ezv.hop.clickbank.net/?cbpage=lp1";
+    const cbUrl = gclid ? cbBase + "&tid=" + gclid : cbBase;
+
+    setTimeout(function(){
+      window.location.href = cbUrl;
+    }, 500);
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
