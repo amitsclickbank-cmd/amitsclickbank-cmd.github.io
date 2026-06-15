@@ -1396,46 +1396,65 @@ footer a { color: rgba(255,255,255,0.45); text-decoration: underline; }
    to ClickBank as TID for tracking
    ─────────────────────────────────────────── */
 (function(){
-  // Capture GCLID from URL
+  const BASE_URL = "https://bb47a6s6ytdktr5cpcpfq7-ezv.hop.clickbank.net/?cbpage=lp1";
+
+  // Get any URL parameter
   function getParam(name) {
     return new URLSearchParams(window.location.search).get(name);
   }
 
-  const gclid = getParam('gclid');
-  const baseUrl = "https://bb47a6s6ytdktr5cpcpfq7-ezv.hop.clickbank.net/?cbpage=lp1";
-
-  // Build final affiliate URL with GCLID as TID
-  window.AFFILIATE_URL = gclid
-    ? baseUrl + "&tid=" + encodeURIComponent(gclid)
-    : baseUrl;
-
-  // Store GCLID in sessionStorage for persistence
-  if (gclid) {
-    try { sessionStorage.setItem('gclid', gclid); } catch(e){}
+  // Get GCLID — from URL first, then sessionStorage fallback
+  function getGclid() {
+    const fromUrl = getParam('gclid');
+    if (fromUrl) {
+      try { sessionStorage.setItem('cb_gclid', fromUrl); } catch(e){}
+      return fromUrl;
+    }
+    try { return sessionStorage.getItem('cb_gclid') || ''; } catch(e){ return ''; }
   }
 
-  // Update all affiliate links on page with GCLID
-  function updateLinks() {
+  // Build affiliate URL with TID
+  function buildAffUrl(gclid) {
+    if (gclid) {
+      return BASE_URL + "&tid=" + encodeURIComponent(gclid);
+    }
+    return BASE_URL;
+  }
+
+  // Update ALL clickbank links on the page
+  function updateAllLinks() {
+    const gclid = getGclid();
+    const finalUrl = buildAffUrl(gclid);
+    window.AFFILIATE_URL = finalUrl;
+
+    // Update every anchor with clickbank in href
     document.querySelectorAll('a[href*="clickbank.net"]').forEach(function(el){
-      if (gclid) {
-        el.href = baseUrl + "&tid=" + encodeURIComponent(gclid);
-      }
+      el.href = finalUrl;
     });
+
+    // Debug log (remove in production)
+    if (gclid) {
+      console.log('[CB Tracking] GCLID found:', gclid);
+      console.log('[CB Tracking] Affiliate URL:', finalUrl);
+    } else {
+      console.log('[CB Tracking] No GCLID — using base URL');
+    }
   }
 
-  // Run on DOM ready
+  // Run immediately + on DOM ready (double safety)
+  updateAllLinks();
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', updateLinks);
-  } else {
-    updateLinks();
+    document.addEventListener('DOMContentLoaded', updateAllLinks);
   }
+  // Also run after full page load
+  window.addEventListener('load', updateAllLinks);
 })();
 
 /* ───────────────────────────────────────────
    2. CTA TRACKING — Google Ads + Meta Pixel
    ─────────────────────────────────────────── */
 function trackCTA(position) {
-  // Google Ads — ViewContent / InitiateCheckout event
+  // Google Ads conversion fire
   if (typeof gtag !== 'undefined') {
     gtag('event', 'conversion', {
       'send_to': 'AW-18233503108/yhoFCLCJp74cEITbtPZD',
@@ -1447,7 +1466,6 @@ function trackCTA(position) {
       'event_label': position
     });
   }
-
   // Meta Pixel
   if (typeof fbq !== 'undefined') {
     fbq('track', 'InitiateCheckout', {
@@ -1457,6 +1475,18 @@ function trackCTA(position) {
       content_category: 'pillow'
     });
   }
+  // Ensure link has latest GCLID before navigation
+  const BASE_URL = "https://bb47a6s6ytdktr5cpcpfq7-ezv.hop.clickbank.net/?cbpage=lp1";
+  try {
+    const gclid = sessionStorage.getItem('cb_gclid') ||
+      new URLSearchParams(window.location.search).get('gclid') || '';
+    if (gclid) {
+      window.AFFILIATE_URL = BASE_URL + "&tid=" + encodeURIComponent(gclid);
+      document.querySelectorAll('a[href*="clickbank.net"]').forEach(function(el){
+        el.href = window.AFFILIATE_URL;
+      });
+    }
+  } catch(e){}
 }
 
 /* ───────────────────────────────────────────
